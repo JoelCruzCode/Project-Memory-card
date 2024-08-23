@@ -1,14 +1,12 @@
-import Card from "./Card"
-
+import Board from "./Board"
+import ScoreBoard from "./ScoreBoard"
 export default function Game ({pokemon}) {
 
     return (
         <main>
-            <div>
-                {pokemon.map(poke => (
-                    <Card key={poke.id} pokemon={poke}></Card>
-                ))}
-            </div>
+            <ScoreBoard></ScoreBoard>
+            <Board pokemon={pokemon}></Board>
+
         </main>
     )
 }
