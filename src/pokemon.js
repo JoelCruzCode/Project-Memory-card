@@ -23,8 +23,8 @@ export async function getRandomPokemon(amount, totalPokemon = 151) {
     return pokemonCards;
 }
 
-export function shufflePokemon(cards) {
-    return fisherYatesShuffle(cards.map(card => ({ ...card, id: uuidv4() })));
+export function shufflePokemon(cards, initial=false) {
+    return fisherYatesShuffle(cards.map(card => (initial ? { ...card, id: uuidv4(), clicked: false } : {...card})));
 }
 
 
