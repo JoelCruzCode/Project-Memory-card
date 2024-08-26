@@ -28,17 +28,22 @@ export function shufflePokemon(cards, initial=false) {
 }
 
 
-export function determinePokemonCount(difficulty) {
+export function determinePokemonCount(difficulty, increment) {
+    let baseCount
     switch (difficulty) {
       case 'Easy':
-        return 6;  // Fewer Pokémon for easy difficulty
+        baseCount = 6;  // Fewer Pokémon for easy difficulty
+        break;
       case 'Medium':
-        return 12; // A moderate number for medium difficulty
+          baseCount = 12; // A moderate number for medium difficulty
+          break;
       case 'Hard':
-        return 18; // More Pokémon for hard difficulty
-      default:
-        return 6;  // Default to easy if something goes wrong
+          baseCount = 18; // More Pokémon for hard difficulty
+          break;
     }
+    const total = baseCount + increment
+    console.log(total)
+    return total
   }
 
 
