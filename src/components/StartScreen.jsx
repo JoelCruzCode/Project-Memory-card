@@ -1,13 +1,13 @@
 import MenuOptions from "./MenuOptions"
 
-export default function StartScreen ({onChange, style}) {
+export default function StartScreen ({gameStatus, onChange, style}) {
 
     return (
         <div 
-        className="display-Modal"
+        className="start-modal"
         style={style}
         >
-            <MenuOptions onChange={onChange}></MenuOptions>
+            <MenuOptions gameStatus={gameStatus} onChange={onChange}></MenuOptions>
         </div>
     )
 }

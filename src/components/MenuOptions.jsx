@@ -1,4 +1,4 @@
-export default function MenuOptions({onChange}) {
+export default function MenuOptions({ gameStatus, onChange}) {
     const options = ['Easy', 'Medium', 'Hard'];
 
     return (
@@ -12,6 +12,7 @@ export default function MenuOptions({onChange}) {
                             name="difficulty"
                             value={option}
                             onChange={onChange}
+                            checked={gameStatus.start}
                         />
                         <span>{option}</span>
                     </label>
