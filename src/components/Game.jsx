@@ -1,12 +1,15 @@
-import Board from "./Board"
-import ScoreBoard from "./ScoreBoard"
-export default function Game ({pokemon}) {
+import Board from "./Board";
+import ScoreBoard from "./ScoreBoard";
 
-    return (
-        <main>
-            <ScoreBoard></ScoreBoard>
-            <Board pokemon={pokemon}></Board>
-
-        </main>
-    )
+export default function Game({ pokemon, gameStatus, scores, onClick }) { 
+  return (
+    <div>
+      <ScoreBoard scores={scores}/>
+      <Board 
+      pokemon={pokemon}  
+      onClick={onClick} 
+      gameStatus={gameStatus}
+      /> 
+    </div>
+  );
 }
